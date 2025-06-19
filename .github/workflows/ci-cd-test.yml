@@ -22,4 +22,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/python-sample:test
+        tags: ${{ format('{0}/python-sample:main', secrets.DOCKER_USERNAME) }}
+
